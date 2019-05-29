@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Made by
+            Still under Development © {new Date().getFullYear()}, Made by
             {` `}
             <a
               href="https://www.github.com/yashguptaz"

@@ -41,6 +41,9 @@ progress {
 template {
   display: none;
 }
+main {
+  margin-top: 60px;
+}
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;

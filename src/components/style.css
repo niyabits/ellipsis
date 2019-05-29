@@ -72,12 +72,13 @@ button {
   background-color: #303030;
   color: #fff;
   padding: 10px;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Google Sans", sans-serif !important;
   font-size: 18px;
   border: none;
   border-radius: 20px;
   font-weight: 700;
-  width: 100px;
+  width: 105px;
   margin-top: -10px;
-  margin-left: 220px;
+  margin-left: 230px !important;
+  cursor: pointer;
 }

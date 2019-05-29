@@ -19,11 +19,10 @@ const IndexPage = () => (
           Because thought may pause <br />
           but never end ...
         </p>
-        <button>posts</button>
+        <a href="#posts">
+          <button>posts</button>
+        </a>
       </div>
-      {/* <h1>Why ?</h1>
-      <p>Because thoughts may pause but never end ....</p>
-      <p>We are a literary venture for students to live their passion.</p> */}
     </div>
   </div>
 )

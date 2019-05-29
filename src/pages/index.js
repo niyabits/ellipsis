@@ -29,18 +29,25 @@ const IndexPage = ({ data }) => (
     </div>
     <div id="posts">
       <div className="container">
-        <h2>Latest Posts</h2>
+        <div id="posts-heading">
+          <h2>Latest Posts</h2>
+          <span id="post-heading-accent">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
         {data.allMarkdownRemark.edges
           .map(post => (
             <div key={post.node.id}>
-              <h4>{post.node.frontmatter.title}</h4>
+              <h3>{post.node.frontmatter.title}</h3>
               <small>
                 Posted by {post.node.frontmatter.author} on{" "}
                 {post.node.frontmatter.date}
               </small>
               <br />
               <br />
-              <Link to={post.node.frontmatter.path}>Read More</Link>
+              <span className="read-more">
+                <Link to={post.node.frontmatter.path}>Read More</Link>
+              </span>
               <br />
               <br />
               <hr />

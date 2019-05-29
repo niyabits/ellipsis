@@ -8,7 +8,7 @@ import { graphql } from "gatsby"
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
-    <h1>Latest Posts</h1>
+    <h1>Blog</h1>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h3>{post.node.frontmatter.title}</h3>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500,700&lang=en");
 
 html {
-  font-family: "Google Sans", sans-serif;
+  font-family: "Google Sans", sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

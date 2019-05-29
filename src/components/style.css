@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500,700&lang=en");
+
+/* Navbar */
+nav {
+  background-color: #fff;
+  padding: 18px;
+  width: 100%;
+}
+
+.nav-branding,
+.nav-links {
+  display: inline;
+}
+
+.nav-branding {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  float: right;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: inline;
+}
+
+nav ul li {
+  display: inline;
+  padding: 12px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 
+* HOME PAGE 
+*/
+
+.home {
+  height: 90vh;
+  background: url(../images/main_blob.svg) no-repeat top right/cover;
+  background-size: 50vw;
+}
+
+.home-branding {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 450px;
+}
+
+.home-branding img {
+  margin-top: 100px;
+}
+
+.home-branding p {
+  font-family: "Google Sans", sans-serif;
+  font-size: 1.1rem;
+  margin-left: 70px;
+  margin-top: -50px;
+}
+
+button {
+  background-color: #303030;
+  color: #fff;
+  padding: 10px;
+  font-family: "Google Sans", sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  width: 100px;
+  margin-top: -10px;
+  margin-left: 220px;
+}

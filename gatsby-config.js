@@ -1,18 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Ellipsis`,
+    description: `Ellipsis ?
+    A literary venture for students to live their passion
+    Why Ellipsis ?
+    Because thoughts may pause but never end ...`,
+    author: `@yashguptaz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

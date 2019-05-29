@@ -6,6 +6,10 @@ nav {
   background-color: #fff;
   padding: 18px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.06);
+  z-index: 999;
 }
 
 .nav-branding,
@@ -32,7 +36,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  padding: 12px;
+  padding: 12px 18px;
 }
 
 .nav-container {
@@ -40,12 +44,16 @@ nav ul li {
   margin: auto;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 /* 
 * HOME PAGE 
 */
 
 .home {
-  height: 90vh;
+  height: 100vh;
   background: url(../images/main_blob.svg) no-repeat top right/cover;
   background-size: 50vw;
 }
@@ -54,11 +62,12 @@ nav ul li {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 450px;
+  position: absolute;
+  left: 30%;
 }
 
 .home-branding img {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .home-branding p {
@@ -81,4 +90,14 @@ button {
   margin-top: -10px;
   margin-left: 230px !important;
   cursor: pointer;
+}
+
+#posts {
+  margin: auto;
+  max-width: 768px;
+  height: 100vh;
+}
+
+#posts .container {
+  padding-top: 120px;
 }

@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500,700&lang=en");
-@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 :root {
   --n-900-color: hsl(0, 0%, 13%);
@@ -18,13 +25,13 @@
 /* Navbar */
 nav {
   background-color: #fff;
-  padding: 18px;
+  padding: 16px;
   width: 100%;
   position: fixed;
   top: 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.06);
   z-index: 999;
-  border-top: var(--n-800-color) 6px solid;
+  border-top: var(--n-900-color) 6px solid;
 }
 
 .nav-branding,
@@ -37,14 +44,19 @@ nav {
   font-weight: 500;
 }
 
+.nav-links a:hover {
+  color: var(--n-900-color);
+}
+
 .nav-branding {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 24px;
 }
 
 .nav-branding a {
   color: var(--n-800-color);
+  letter-spacing: 0.1em;
 }
 
 .nav-links {
@@ -88,7 +100,7 @@ nav a {
   flex-direction: column;
   position: absolute;
   left: 30%;
-  color: var(--n-700-color);
+  color: var(--n-900-color);
   font-weight: 500;
 }
 
@@ -99,23 +111,30 @@ nav a {
 .home-branding p {
   font-family: "Google Sans", sans-serif;
   font-size: 1.1rem;
-  margin-left: 70px;
-  margin-top: -50px;
+  margin-left: 64px;
+  margin-top: -48px;
+  line-height: 1.5em;
 }
 
 button {
+  position: relative;
   background-color: var(--n-900-color);
   color: var(--n-000-color);
-  padding: 10px;
+  padding: 12px;
   font-family: "Google Sans", sans-serif !important;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
-  border-radius: 20px;
+  border-radius: 24px;
   font-weight: 700;
-  width: 110px;
-  margin-top: 10px;
-  margin-left: 230px !important;
+  width: 128px;
+  margin-top: 18px;
+  margin-left: 256px !important;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0, 1);
 }
 
 /* 
@@ -125,37 +144,37 @@ button {
 #posts {
   margin: auto;
   max-width: 768px;
-  height: 100vh;
+  height: 100%;
+  margin-bottom: 96px;
 }
 
 #posts .container {
-  padding-top: 120px;
+  padding-top: 128px;
 }
 
 #posts .container h2 {
-  font-size: 1.7rem;
+  font-size: 32px;
   font-weight: 700;
-  color: var(--n-800-color);
+  color: var(--n-900-color);
   margin-bottom: -0.1rem;
 }
 
-#posts .container #posts-heading {
-  margin-bottom: 3.2rem;
-  top: -150px;
+#posts .container h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px !important;
+  color: var(--n-900-color);
+  font-family: "Zilla Slab", serif;
+}
+
+#posts .container #post-heading {
+  margin-bottom: 64px;
 }
 
 #posts .container #post-heading-accent {
-  border-bottom: 5px solid var(--n-700-color);
+  border-bottom: 4px solid var(--n-700-color);
   width: 100%;
   height: 100px;
-}
-
-#posts .container h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 3px !important;
-  color: var(--n-800-color);
-  font-family: "Merriweather", serif;
 }
 
 #posts .container small {
@@ -163,12 +182,57 @@ button {
 }
 
 #posts .container .read-more a {
-  color: var(--n-600-color);
-  font-size: 0.95rem;
+  color: var(--n-700-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#posts .container .read-more a:hover {
+  color: var(--n-900-color);
+  text-decoration: underline;
+  transition: all 0.05s cubic-bezier(0.4, 0, 0, 1);
 }
 
 #posts .container .read-more,
 hr {
   position: relative;
-  top: -6px;
+  top: -8px;
+}
+
+/* 
+* ABOUT
+ */
+
+.about h1 {
+  font-size: 48px;
+  color: #000;
+  font-weight: 500;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--n-700-color);
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* 
+* FOOTER
+*/
+#footer {
+  max-width: 768px;
+  margin: auto;
+}
+
+footer {
+  color: var(--n-600-color);
+}
+
+footer a {
+  color: var(--n-600-color);
+}
+
+footer a:hover {
+  color: var(--n-800-color);
+  text-decoration: underline;
 }

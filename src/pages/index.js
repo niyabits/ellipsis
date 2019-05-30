@@ -3,6 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 import "../components/style.css"
 import Menu from "../components/menu"
+import Footer from "../components/footer"
 
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
@@ -16,10 +17,10 @@ const IndexPage = ({ data }) => (
         <img
           src={require("../images/logo.jpg")}
           alt="ellipsis logo"
-          width="350px"
+          width="384px"
         />
         <p>
-          Because thought may pause <br />
+          Because thoughts may pause <br />
           but never end ...
         </p>
         <a href="#posts">
@@ -29,7 +30,7 @@ const IndexPage = ({ data }) => (
     </div>
     <div id="posts">
       <div className="container">
-        <div id="posts-heading">
+        <div id="post-heading">
           <h2>Latest Posts</h2>
           <span id="post-heading-accent">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -55,6 +56,9 @@ const IndexPage = ({ data }) => (
           ))
           .splice(0, 3)}
       </div>
+    </div>
+    <div id="footer">
+      <Footer />
     </div>
   </div>
 )

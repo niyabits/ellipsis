@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Menu from "./menu"
 import "./layout.css"
+import Footer from "./footer"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,24 +30,14 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 768,
+            maxWidth: 668,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
             marginTop: "120px",
           }}
         >
           <main>{children}</main>
-          <footer>
-            Still under Development © {new Date().getFullYear()}, Made by
-            {` `}
-            <a
-              href="https://www.github.com/yashguptaz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Yash
-            </a>
-          </footer>
+          <Footer />
         </div>
       </>
     )}

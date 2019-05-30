@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500,700&lang=en");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 
 html {
-  font-family: "Google Sans", sans-serif !important;
+  font-family: "Source Sans Pro", sans-serif;
+  font-display: auto;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -48,6 +50,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   color: #333;
+  text-decoration: none;
 }
 a:active,
 a:hover {

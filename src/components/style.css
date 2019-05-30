@@ -84,6 +84,12 @@ nav a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 768px) {
+  nav ul li {
+    padding: 12px 8px;
+  }
+}
+
 /* 
 * HOME PAGE 
 */
@@ -148,8 +154,7 @@ button:hover {
     flex-direction: column;
     color: var(--n-900-color);
     font-weight: 500;
-    margin: auto;
-    left: 0;
+    left: auto;
   }
   .home-branding img {
     margin-top: 128px;
@@ -167,6 +172,17 @@ button:hover {
   .home-branding a {
     display: flex;
     justify-content: center;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .home-branding {
+    left: 0;
   }
 }
 
@@ -262,7 +278,7 @@ footer {
   color: var(--n-600-color);
   margin-top: 192px;
   margin-bottom: 128px;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   padding: 0 20px;
 }
@@ -278,6 +294,8 @@ footer a:hover {
 
 @media only screen and (max-width: 768px) {
   footer {
+    display: flex;
+    flex-direction: column;
     margin-top: 64px;
     margin-bottom: 64px;
   }

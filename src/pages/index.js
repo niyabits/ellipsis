@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
         <img
           src={require("../images/logo.png")}
           alt="ellipsis logo"
-          width="384px"
+          width="284px"
         />
         <p>
           Because thoughts may pause <br />

@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
     <div className="home">
       <div className="home-branding">
         <img
-          src={require("../images/logo.jpg")}
+          src={require("../images/logo.png")}
           alt="ellipsis logo"
           width="384px"
         />

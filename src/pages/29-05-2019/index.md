@@ -1,8 +1,8 @@
 ---
 path: "/this-is-the-URL-of-post-one"
 date: "29-05-2019"
-title: "My First Gatsby Post"
-author: "Yash Gupta"
+title: "My First Post on this blog for testing purposes."
+author: "Jane Doe"
 ---
 
 ## Hello

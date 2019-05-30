@@ -4,26 +4,40 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
+import "../components/style.css"
 
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
-    <h1>Blog</h1>
-    {data.allMarkdownRemark.edges.map(post => (
-      <div key={post.node.id}>
-        <h3>{post.node.frontmatter.title}</h3>
-        <small>
-          Posted by {post.node.frontmatter.author} on{" "}
-          {post.node.frontmatter.date}
-        </small>
-        <br />
-        <br />
-        <Link to={post.node.frontmatter.path}>Read More</Link>
-        <br />
-        <br />
-        <hr />
+    <div className="posts">
+      <div className="container" style={{ paddingTop: 0 }}>
+        <div className="post-heading">
+          <h1 style={{ fontWeight: 500, fontSize: "48px", color: "#000" }}>
+            Blog
+          </h1>
+        </div>
+        {data.allMarkdownRemark.edges.map(post => (
+          <div key={post.node.id}>
+            <Link to={post.node.frontmatter.path}>
+              <h3>{post.node.frontmatter.title}</h3>
+            </Link>
+            <small>
+              Posted by{" "}
+              <span class="author">{post.node.frontmatter.author}</span> on{" "}
+              {post.node.frontmatter.date}
+            </small>
+            <br />
+            <br />
+            <span className="read-more">
+              <Link to={post.node.frontmatter.path}>Read More</Link>
+            </span>
+            <br />
+            <br />
+            <hr />
+          </div>
+        ))}
       </div>
-    ))}
+    </div>
   </Layout>
 )
 

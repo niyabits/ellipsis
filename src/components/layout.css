@@ -78,7 +78,7 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  font-size: 95%;
 }
 sub,
 sup {
@@ -227,7 +227,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;

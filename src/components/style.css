@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500,700&lang=en");
-@import url("https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 /* CSS Reset */
 * {
@@ -10,16 +9,16 @@
 }
 
 :root {
-  --n-900-color: hsl(0, 0%, 13%);
-  --n-800-color: hsl(0, 0%, 23%);
-  --n-700-color: hsl(0, 0%, 32%);
-  --n-600-color: hsl(0, 0%, 38%);
-  --n-500-color: hsl(0, 0%, 49%);
-  --n-400-color: hsl(0, 0%, 62%);
-  --n-300-color: hsl(0, 0%, 69%);
-  --n-200-color: hsl(0, 0%, 81%);
-  --n-100-color: hsl(0, 0%, 88%);
-  --n-000-color: hsl(0, 0%, 97%);
+  --n-900-color: hsl(200, 15%, 13%);
+  --n-800-color: hsl(200, 15%, 23%);
+  --n-700-color: hsl(200, 12%, 32%);
+  --n-600-color: hsl(200, 12%, 38%);
+  --n-500-color: hsl(200, 9%, 49%);
+  --n-400-color: hsl(200, 9%, 62%);
+  --n-300-color: hsl(200, 6%, 69%);
+  --n-200-color: hsl(200, 6%, 81%);
+  --n-100-color: hsl(200, 3%, 88%);
+  --n-000-color: hsl(200, 3%, 97%);
 }
 
 /* Navbar */
@@ -190,7 +189,7 @@ button:hover {
 * Posts
 */
 
-#posts {
+.posts {
   margin: auto;
   max-width: 768px;
   height: 100%;
@@ -198,55 +197,65 @@ button:hover {
   padding: 0 20px;
 }
 
-#posts .container {
+.posts .container {
   padding-top: 128px;
 }
 
-#posts .container h2 {
+.posts .container h2 {
   font-size: 36px;
   font-weight: 500;
-  color: var(--n-900-color);
+  color: #000;
   margin-bottom: 0.7rem;
 }
 
-#posts .container h3 {
+.posts .container a:hover {
+  text-decoration: underline;
+}
+
+.posts .container h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 4px !important;
   color: var(--n-900-color);
-  font-family: "Zilla Slab", serif;
+  font-family: "Google Sans", serif;
 }
 
-#posts .container #post-heading {
+.posts .container .post-heading {
   margin-bottom: 64px;
 }
 
-#posts .container #post-heading-accent {
+.posts .container .post-heading-accent {
   border-bottom: 4px solid var(--n-700-color);
   width: 100%;
   height: 100px;
 }
 
-#posts .container small {
+.posts .container small {
   color: var(--n-500-color);
+  font-family: "Google Sans", serif;
 }
 
-#posts .container .read-more a {
+.posts .container .read-more a {
   color: var(--n-700-color);
   font-size: 18px;
   font-weight: 500;
 }
 
-#posts .container .read-more a:hover {
+.posts .container .read-more a:hover {
   color: var(--n-900-color);
   text-decoration: underline;
   transition: all 0.05s cubic-bezier(0.4, 0, 0, 1);
 }
 
-#posts .container .read-more,
+.posts .container .read-more,
 hr {
   position: relative;
   top: -8px;
+}
+
+.author {
+  color: var(--n-700-color);
+  font-weight: 700;
 }
 
 /* 
@@ -264,6 +273,73 @@ hr {
   line-height: 1.7;
   color: var(--n-700-color);
   font-family: "Source Sans Pro", sans-serif;
+}
+
+/* 
+* Blog TEMPLATE
+ */
+
+.blog-template p,
+li {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  color: var(--n-700-color);
+  font-weight: 100;
+}
+
+.blog-template p {
+  line-height: 1.8;
+}
+
+.blog-template li {
+  line-height: 2;
+}
+
+.blog-template h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500 !important;
+  color: #000 !important;
+  max-width: 90%;
+}
+
+.blog-content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 18px !important;
+  margin-top: 64px !important;
+}
+
+.blog-info {
+  font-weight: 500 !important;
+  margin-top: -4px !important;
+  margin-bottom: 48px;
+  color: var(--n-700-color) !important;
+}
+
+.blog-template p,
+li {
+  margin-bottom: 48px;
+}
+
+.blog-template ul,
+ol {
+  margin-top: -24px;
+}
+
+.blog-author {
+  color: var(--n-800-color);
+  font-weight: 600;
+}
+
+.blog-template a {
+  margin-left: -50px;
 }
 
 /* 

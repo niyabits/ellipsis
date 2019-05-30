@@ -181,12 +181,6 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 390px) {
-  .home-branding {
-    left: 0;
-  }
-}
-
 /* 
 * Posts
 */

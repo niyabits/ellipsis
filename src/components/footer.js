@@ -2,15 +2,8 @@ import React from "react"
 import "../components/style.css"
 
 const footer = () => (
-  <footer
-    style={{
-      marginTop: "192px",
-      marginBottom: "128px",
-      display: "flex",
-      justifyContent: "space-between",
-    }}
-  >
-    <div className="branding">
+  <footer>
+    <div className="branding footer-center">
       © {new Date().getFullYear()},{` `}
       Ellipsis &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
       <a
@@ -29,7 +22,7 @@ const footer = () => (
         />
       </a>
     </div>
-    <div className="email">
+    <div className="email footer-center">
       {" "}
       <a
         href="mailto:word.ellipsis@gmail.com"

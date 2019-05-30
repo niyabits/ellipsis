@@ -137,6 +137,39 @@ button:hover {
   transition: all 0.1s cubic-bezier(0.4, 0, 0, 1);
 }
 
+@media only screen and (max-width: 768px) {
+  .home {
+    background: none;
+  }
+
+  .home-branding {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--n-900-color);
+    font-weight: 500;
+    margin: auto;
+    left: 0;
+  }
+  .home-branding img {
+    margin-top: 128px;
+  }
+  button {
+    position: relative;
+    font-size: 24px;
+    width: 128px;
+    margin: 25px auto !important;
+  }
+  #posts .container {
+    padding-top: 0;
+  }
+
+  .home-branding a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* 
 * Posts
 */
@@ -146,6 +179,7 @@ button:hover {
   max-width: 768px;
   height: 100%;
   margin-bottom: 96px;
+  padding: 0 20px;
 }
 
 #posts .container {
@@ -153,10 +187,10 @@ button:hover {
 }
 
 #posts .container h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 500;
   color: var(--n-900-color);
-  margin-bottom: -0.1rem;
+  margin-bottom: 0.7rem;
 }
 
 #posts .container h3 {
@@ -226,6 +260,11 @@ hr {
 
 footer {
   color: var(--n-600-color);
+  margin-top: 192px;
+  margin-bottom: 128px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 footer a {
@@ -235,4 +274,20 @@ footer a {
 footer a:hover {
   color: var(--n-800-color);
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  footer .footer-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+  }
+  footer .branding {
+    margin-bottom: 8px;
+  }
 }

@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import Link from "gatsby-link"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -10,8 +11,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
-      <br />
       <div className="blog-template">
+        <Link to="/blog">Back</Link>
+        <br />
+        <br />
+        <hr />
         <h1 className="blog-title">{post.frontmatter.title}</h1>
         <h4 className="blog-info">
           Posted by{" "}

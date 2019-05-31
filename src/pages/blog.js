@@ -11,10 +11,8 @@ const BlogPage = ({ data }) => (
     <SEO title="Blog" />
     <div className="posts">
       <div className="container" style={{ paddingTop: 0 }}>
-        <div className="post-heading">
-          <h1 style={{ fontWeight: 500, fontSize: "48px", color: "#000" }}>
-            Blog
-          </h1>
+        <div className="post-heading blog-page-heading">
+          <h1>Blog</h1>
         </div>
         {data.allMarkdownRemark.edges.map(post => (
           <div key={post.node.id}>

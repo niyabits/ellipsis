@@ -30,6 +30,7 @@ module.exports = {
         theme_color: `#000000`,
         display: `standalone`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        ​​orientation: `portrait`
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

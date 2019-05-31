@@ -293,6 +293,10 @@ hr {
   .blog-page-heading h1 {
     font-size: 36px;
   }
+
+  .posts .container {
+    padding-top: 32px;
+  }
 }
 
 /* 

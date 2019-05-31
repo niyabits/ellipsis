@@ -1,12 +1,10 @@
 ---
-path: "/this-is-the-URL-of-post-one"
+path: "/blog/this-is-the-URL-of-post-one"
 date: "29-05-2019"
 title: "My First Post on this blog for testing purposes."
 author: "Jane Doe"
 ---
 
-## Hello
+## This is the first Post of the Website
 
-## This is Post One!
-
-This is my very **first blog** _post on this website_.
+I am Glad that you checked this page out but this is just for testing.

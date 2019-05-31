@@ -32,7 +32,7 @@ nav {
   top: 0;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.06);
   z-index: 999;
-  border-top: var(--n-900-color) 6px solid;
+  border-top: #000 6px solid;
 }
 
 .nav-branding,

@@ -1,12 +1,13 @@
 ---
-path: "/this-is-the-URL-of-post-two"
+path: "/blog/this-is-the-URL-of-post-two"
 date: "30-05-2019"
 title: "My Second Gatsby Post on this blog again for testing purpose."
 author: "John Doe"
 ---
 
-## Hello
+## This is the second Post of the Website
 
-## This is Post Two!
+I am Glad that you checked this page out but this is just for testing.
+Here is our logo -
 
-This is my **second blog** _post on this website_.
+![Our Logo](https://word-ellipsis.netlify.com/static/logo-155603611f5ae113f053932faa660d8c.png "Ellipsis Logo")

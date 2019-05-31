@@ -1,9 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
 import "./style.css"
+import { Helmet } from "react-helmet"
 
 const menu = () => (
   <nav>
+    <Helmet>
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+    </Helmet>
     <div className="nav-container">
       <div className="nav-branding">
         <Link to="/">ELLIPSIS</Link>

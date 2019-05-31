@@ -151,6 +151,9 @@ button:hover {
 @media only screen and (max-width: 768px) {
   .home {
     background: none;
+    align-content: center;
+    align-items: center;
+    margin-top: 32px;
   }
 
   .home-branding {
@@ -162,7 +165,7 @@ button:hover {
     left: auto;
   }
   .home-branding img {
-    margin-top: 224px;
+    margin-top: 0;
     width: 192px;
     margin-left: auto;
     margin-right: auto;

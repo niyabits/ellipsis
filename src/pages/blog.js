@@ -19,10 +19,10 @@ const BlogPage = ({ data }) => (
             <Link to={post.node.frontmatter.path}>
               <h3>{post.node.frontmatter.title}</h3>
             </Link>
-            <small>
+            <small className="blog-info">
               Posted by{" "}
               <span class="author">{post.node.frontmatter.author}</span> on{" "}
-              {post.node.frontmatter.date}
+              <span class="date">{post.node.frontmatter.date}</span>
             </small>
             <br />
             <br />
@@ -46,10 +46,10 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            path
+            date(formatString: "MMMM DD, YYYY")
             title
             author
-            date
+            path
           }
         }
       }

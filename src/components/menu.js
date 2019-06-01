@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import "./style.css"
+import "./global.css"
 import { Helmet } from "react-helmet"
 
 const menu = () => (

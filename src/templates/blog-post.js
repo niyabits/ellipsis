@@ -8,7 +8,6 @@ import Link from "gatsby-link"
 export default function Template({ data, pageContext }) {
   const post = data.markdownRemark
   const { next, prev } = pageContext
-
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />

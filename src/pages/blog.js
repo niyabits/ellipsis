@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
-import "../components/style.css"
+import "../components/global.css"
 
 const BlogPage = ({ data }) => (
   <Layout>
@@ -21,8 +21,8 @@ const BlogPage = ({ data }) => (
             </Link>
             <small className="blog-info">
               Posted by{" "}
-              <span class="author">{post.node.frontmatter.author}</span> on{" "}
-              <span class="date">{post.node.frontmatter.date}</span>
+              <span className="author">{post.node.frontmatter.author}</span> on{" "}
+              <span className="date">{post.node.frontmatter.date}</span>
             </small>
             <br />
             <br />

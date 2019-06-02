@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
     <div className="span" id="posts" />
-    <div className="posts">
+    <div className="posts" style={{ padding: "0 20px" }}>
       <div className="container">
         <div className="post-heading">
           <h2>Latest Posts</h2>
@@ -43,10 +43,10 @@ const IndexPage = ({ data }) => (
               <Link to={post.node.frontmatter.path}>
                 <h3>{post.node.frontmatter.title}</h3>
               </Link>
-              <small className="blog-info">
+              <small>
                 Posted by{" "}
-                <span className="author">{post.node.frontmatter.author}</span>{" "}
-                on <span className="date">{post.node.frontmatter.date}</span>
+                <span class="author">{post.node.frontmatter.author}</span> on{" "}
+                {post.node.frontmatter.date}
               </small>
               <br />
               <br />
@@ -74,10 +74,10 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            path
             title
             author
-            path
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

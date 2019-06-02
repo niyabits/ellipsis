@@ -7,16 +7,15 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      edges {
-        allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
           node {
-            html
             id
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              path
               title
               author
-              path
+              date
             }
           }
         }
@@ -26,17 +25,10 @@ exports.createPages = ({ actions, graphql }) => {
     if (res.errors) {
       return Promise.reject(res.errors)
     }
-
-    const posts = res.data.allMarkdownRemark.edges
-
-    posts.forEach(({ node }, index) => {
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
-        context: {
-          next: index === 0 ? null : posts[index - 1].node,
-          prev: index === posts.length - 1 ? null : posts[index + 1].node,
-        },
       })
     })
   })

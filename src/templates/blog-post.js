@@ -5,15 +5,14 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Link from "gatsby-link"
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
   const post = data.markdownRemark
+  const { next, prev } = pageContext
 
   return (
     <Layout>
       <SEO title={`${post.frontmatter.title}`} />
       <div className="blog-template">
-        <Link to="/blog">Back</Link>
-        <br />
         <br />
         <hr />
         <h1 className="blog-title">{post.frontmatter.title}</h1>
@@ -26,6 +25,24 @@ export default function Template({ data }) {
           dangerouslySetInnerHTML={{ __html: post.html }}
           className="blog-content"
         />
+        <br />
+        <hr />
+        <div className="page-btns">
+          {prev && (
+            <div className="blog-post-prev-btn">
+              <Link to={prev.frontmatter.path}>
+                <button>Previous</button>
+              </Link>
+            </div>
+          )}
+          {next && (
+            <div className="blog-post-next-btn">
+              <Link to={next.frontmatter.path}>
+                <button>Next</button>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </Layout>
   )

@@ -250,14 +250,15 @@ button:hover {
 }
 
 .blog-info {
-  color: var(--n-500-color);
-  font-family: "Google Sans", serif;
+  color: var(--n-500-color) !important;
+  font-family: "Google Sans", sans-serif !important;
 }
 
 .posts .container .read-more a {
+  font-family: "Roboto", sans-serif;
   color: var(--n-700-color);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .posts .container .read-more a:hover {
@@ -273,8 +274,8 @@ hr {
 }
 
 .author {
-  color: var(--n-700-color);
-  font-weight: 700;
+  color: var(--n-800-color);
+  font-weight: 500;
 }
 
 .date {
@@ -288,6 +289,12 @@ hr {
 .blog-page-heading h1 {
   font-weight: 500;
   font-size: 48px;
+}
+
+small {
+  font-family: "Google Sans", sans-serif;
+  color: var(--n-500-color);
+  margin-top: 4px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -351,6 +358,10 @@ hr {
   margin-top: -24px;
 }
 
+.blog-content h1 {
+  font-size: 2rem;
+}
+
 .blog-template p,
 li {
   font-family: "Source Sans Pro", sans-serif;
@@ -391,7 +402,7 @@ h6 {
 
 .blog-template .blog-info {
   position: relative;
-  top: -12px;
+  top: -48px;
 }
 
 .blog-template p,
@@ -407,6 +418,27 @@ ol {
 .blog-author {
   color: var(--n-800-color);
   font-weight: 600;
+}
+
+.blog-template a {
+  text-decoration: underline;
+}
+
+.blog-content blockquote {
+  margin-left: 0;
+  border-left: solid 0.25em var(--n-100-color);
+}
+
+.blog-content blockquote p {
+  color: var(--n-400-color);
+  margin-left: 24px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.blog-content th,
+td {
+  font-family: "Roboto", sans-serif;
 }
 
 .page-btns {

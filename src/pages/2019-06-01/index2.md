@@ -5,7 +5,7 @@ author: "Yash Gupta"
 path: "/blog/What-is-right-with-our-education-system"
 ---
 
-![Blog Post Banner](./banner.jpeg)
+![Blog Post Banner](https://miro.medium.com/max/700/1*nXyNlZao1SrVffENgHLekw.jpeg)
 <br><br>
 Everything? Nothing? or something? I have been listening to some great global leaders who have came across many things which are Not “Right with our Education System.” First of all I want to make clear that I am not a STUDY HATER, I love to study but I have something about our education system to share which is for an average student.
 

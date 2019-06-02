@@ -45,8 +45,8 @@ const IndexPage = ({ data }) => (
               </Link>
               <small>
                 Posted by{" "}
-                <span class="author">{post.node.frontmatter.author}</span> on{" "}
-                {post.node.frontmatter.date}
+                <span className="author">{post.node.frontmatter.author}</span>{" "}
+                on {post.node.frontmatter.date}
               </small>
               <br />
               <br />

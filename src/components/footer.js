@@ -12,7 +12,7 @@ const footer = () => (
         rel="noopener noreferrer"
       >
         <img
-          src={require("../images/instagram.svg")}
+          src={require("../../content/assets/instagram.svg")}
           alt="instagram"
           width="22px"
           style={{

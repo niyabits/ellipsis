@@ -23,6 +23,10 @@
   --n-000-color: hsl(200, 3%, 97%);
 }
 
+a {
+  box-shadow: none !important;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   color: #fff;
@@ -54,6 +58,7 @@ nav {
 .nav-links a {
   color: var(--n-800-color);
   font-weight: 500;
+  text-decoration: none;
 }
 
 .nav-links a:hover {
@@ -112,7 +117,7 @@ nav a {
 
 .home {
   height: 100vh;
-  background: url(../images/main_blob.svg) no-repeat top right/cover;
+  background: url(../../content/assets/main_blob.svg) no-repeat top right/cover;
   background-size: 50vw;
 }
 
@@ -218,6 +223,10 @@ button:hover {
 
 .posts .container {
   padding-top: 128px;
+}
+
+.posts a {
+  color: var(--n-800-color);
 }
 
 .posts .container h2 {

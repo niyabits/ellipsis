@@ -1,25 +1,59 @@
 module.exports = {
   siteMetadata: {
-    title: `Ellipsis`,
-    description: `Ellipsis ?
-    A literary venture for students to live their passion
-    Why Ellipsis ?
-    Because thoughts may pause but never end ...`,
-    author: `@yashguptaz`,
+    title: `Gatsby Starter Blog`,
+    author: `Kyle Mathews`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    social: {
+      twitter: `kylemathews`,
+    },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,36 +63,15 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#000000`,
         display: `standalone`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
-      },
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            ignoreFileExtensions: [],
-            options: {
-              maxWidth: 768,
-            },
-          },
-        ],
+        icon: `content/assets/logo.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank",
-              rel: "noopener noreferrer",
-            },
-          },
-        ],
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     `gatsby-plugin-netlify-cms`,

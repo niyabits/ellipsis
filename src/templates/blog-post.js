@@ -1,69 +1,103 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 
+import Bio from "../components/bio"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import Link from "gatsby-link"
+import { rhythm, scale } from "../utils/typography"
 
-export default function Template({ data, pageContext }) {
-  const post = data.markdownRemark
-  const { next, prev } = pageContext
+class BlogPostTemplate extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
 
-  return (
-    <div
-      style={{
-        background:
-          "linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 100%)",
-      }}
-    >
-      <Layout>
-        <SEO title={`${post.frontmatter.title}`} />
-        <div className="blog-template">
-          <br />
-          <hr />
-          <h1 className="blog-title">{post.frontmatter.title}</h1>
-          <h4 className="blog-info">
-            Posted by{" "}
-            <span className="blog-author">{post.frontmatter.author}</span> on{" "}
-            {post.frontmatter.date}
-          </h4>
-          <div
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            className="blog-content"
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
+        <article>
+          <header>
+            <h1
+              style={{
+                marginTop: rhythm(1),
+                marginBottom: 0,
+              }}
+            >
+              {post.frontmatter.title}
+            </h1>
+            <p
+              style={{
+                ...scale(-1 / 5),
+                display: `block`,
+                marginBottom: rhythm(1),
+              }}
+            >
+              {post.frontmatter.date}
+            </p>
+          </header>
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
           />
-          <br />
-          <hr />
-          <div className="page-btns">
-            {prev && (
-              <div className="blog-post-prev-btn">
-                <Link to={prev.frontmatter.path}>
-                  <button>Previous</button>
+          <footer>
+            <Bio />
+          </footer>
+        </article>
+
+        <nav>
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
                 </Link>
-              </div>
-            )}
-            {next && (
-              <div className="blog-post-next-btn">
-                <Link to={next.frontmatter.path}>
-                  <button>Next</button>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
                 </Link>
-              </div>
-            )}
-          </div>
-        </div>
+              )}
+            </li>
+          </ul>
+        </nav>
       </Layout>
-    </div>
-  )
+    )
+  }
 }
 
-export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+export default BlogPostTemplate
+
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
         title
         author
-        path
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
   }

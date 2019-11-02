@@ -25,6 +25,7 @@ class BlogPostTemplate extends React.Component {
             paddingTop: 0,
             marginTop: "120px",
           }}
+          className="blog-template"
         >
           <article>
             <header>

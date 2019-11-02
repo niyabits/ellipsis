@@ -8,3 +8,18 @@ fields:
     required: false
   label: Title
   description: Title of the post
+- name: date
+  type: datetime
+  label: date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Date of your post.
+- name: description
+  type: text
+  config:
+    required: false
+  label: description
+  description: Description of your post.
